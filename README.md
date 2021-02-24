@@ -44,6 +44,12 @@ Path
 * The current point is initially at the origin. After each operation adding a segment to a sub-path, the current point is updated to the end of that segment.
 * Paths can be drawn on canvases using Canvas.drawPath, and can used to create clip regions using Canvas.clipPath.
 
+save() : This method is used to save the current state of Canvas.
+restore() : This method is used to restore the saved state from stack.
+            We can use any number of save before restore and the stack will remember all entries,
+            i.e. restore will always pop the most recent entry.
+            
+
 
 Canvas Advance Use Cases
 https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
