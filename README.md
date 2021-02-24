@@ -1,6 +1,6 @@
 # canvas-flutter
 
-Cavas in flutter
+Canvas in flutter
 
 Canvas
 * An interface for recording graphical operations.
