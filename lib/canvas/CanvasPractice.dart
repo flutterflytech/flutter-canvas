@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
@@ -32,7 +31,7 @@ class CanvasPracticeUI extends StatefulWidget {
 }
 
 class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
-  int shape_type = -1;
+  int shapeType = -1;
   String shapeName = "";
 
   @override
@@ -48,8 +47,8 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 0) {
-                      shape_type = 0;
+                    if (shapeType != 0) {
+                      shapeType = 0;
                       shapeName = "Line";
                     }
                   });
@@ -59,8 +58,8 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 1) {
-                      shape_type = 1;
+                    if (shapeType != 1) {
+                      shapeType = 1;
                       shapeName = "Stroke Circle";
                     }
                   });
@@ -70,8 +69,8 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 2) {
-                      shape_type = 2;
+                    if (shapeType != 2) {
+                      shapeType = 2;
                       shapeName = "Rectangle";
                     }
                   });
@@ -81,8 +80,8 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 3) {
-                      shape_type = 3;
+                    if (shapeType != 3) {
+                      shapeType = 3;
                       shapeName = "Arc";
                     }
                   });
@@ -97,8 +96,8 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 4) {
-                      shape_type = 4;
+                    if (shapeType != 4) {
+                      shapeType = 4;
                       shapeName = "Triangle";
                     }
                   });
@@ -108,9 +107,9 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 5) {
+                    if (shapeType != 5) {
                       shapeName = "Points";
-                      shape_type = 5;
+                      shapeType = 5;
                     }
                   });
                 },
@@ -119,9 +118,9 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    if (shape_type != 6) {
+                    if (shapeType != 6) {
                       shapeName = "Bezier";
-                      shape_type = 6;
+                      shapeType = 6;
                     }
                   });
                 },
@@ -130,7 +129,7 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
             ],
           ),
           CustomPaint(
-            painter: ShapePainter(shape_type, shapeName),
+            painter: ShapePainter(shapeType, shapeName),
             child: Container(),
           ),
           Text(

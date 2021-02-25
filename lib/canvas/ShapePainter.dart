@@ -1,25 +1,23 @@
 import 'dart:ui';
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
 class ShapePainter extends CustomPainter {
-  int shape_type;
+  int shapeType;
   String shapeName = "";
 
-  ShapePainter(int shape_type1, String shapeName1) {
-    shape_type = shape_type1;
+  ShapePainter(int shapeType1, String shapeName1) {
+    shapeType = shapeType1;
     shapeName = shapeName1;
   }
 
   @override
   void paint(Canvas canvas, Size size) {
     print("paint>>>> $canvas Size : $size");
-    print(shape_type);
-    switch (shape_type) {
+    print(shapeType);
+    switch (shapeType) {
       case 0:
         drawLine(canvas, size);
-
         break;
       case 1:
         createCircle(canvas, size, 65);
@@ -35,11 +33,9 @@ class ShapePainter extends CustomPainter {
         break;
       case 5:
         plotPoints(canvas, size);
-        // drawColor(canvas, size);
         break;
-      case 5:
-        plotPoints(canvas, size);
-        // drawColor(canvas, size);
+      case 6:
+        drawQuadraticBezier(canvas, size);
         break;
       default:
         print("DEFAULT");
@@ -59,10 +55,7 @@ class ShapePainter extends CustomPainter {
   void drawLine(Canvas canvas, Size size) {
     var paint = Paint();
     paint.color = Colors.green;
-    paint.strokeWidth = 1.0; // Defines the Thickness of the shape
-    // Offset start = Offset(0, size.height / 2); // Sets the starting coordinate
-    // Offset end = Offset(size.width, size.height / 2);
-
+    paint.strokeWidth = 2.0; // Defines the Thickness of the shape
     Offset start = Offset(10, 260); // Sets the starting coordinate
     Offset end = Offset(size.width - 10, 260);
     canvas.drawLine(start, end, paint);
