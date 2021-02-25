@@ -16,6 +16,9 @@ class CanvasPractice extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter Canvas"),
+          ),
           body: CanvasPracticeUI(),
         ),
       ),
@@ -111,7 +114,7 @@ class _CanvasPracticeUIState extends State<CanvasPracticeUI> {
                     }
                   });
                 },
-                child: Text("Plot Ploints"),
+                child: Text("Plot Points"),
               ),
               RaisedButton(
                 onPressed: () {

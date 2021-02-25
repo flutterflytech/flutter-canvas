@@ -75,7 +75,7 @@ class ShapePainter extends CustomPainter {
     paint.strokeWidth = 2.0;
     Offset offset = Offset(size.width / 2, 300);
     canvas.drawCircle(offset, radius, paint);
-    canvas.save();
+    //canvas.save();
   }
 
   void createRectangle(
