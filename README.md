@@ -53,5 +53,8 @@ restore() : This method is used to restore the saved state from stack.
 
 Canvas Advance Use Cases
 https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
+_____________________________________________________________________________________________________________________
+
+# Animating the Shapes Drawn using Canvas
 
 
