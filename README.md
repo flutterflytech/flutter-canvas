@@ -2,7 +2,7 @@
 
 Canvas in flutter
 
-Canvas
+<b>Canvas</b>
 * An interface for recording graphical operations.
 * Canvas objects are used in creating Picture objects, which can themselves be used with a SceneBuilder to build a Scene. In normal usage, however, this is all handled by the framework.
 * A canvas has a current transformation matrix which is applied to all operations. Initially, the transformation matrix is the identity transform. It can be modified using the translate, scale, rotate, skew, and transform methods.
@@ -10,7 +10,7 @@ Canvas
 * The current transform and clip can be saved and restored using the stack managed by the save, saveLayer, and restore methods.
 
 
-CustomPainter class
+<b>CustomPainter class</b>
 * The interface used by CustomPaint (in the widgets library) and RenderCustomPaint (in the rendering library).
 * To implement a custom painter, either subclass or implement this interface to define your custom paint delegate. CustomPaint subclasses must implement the paint and shouldRepaint methods, and may optionally also implement the hitTest and shouldRebuildSemantics methods, and the semanticsBuilder getter.
 * The paint method is called whenever the custom object needs to be repainted.
@@ -18,10 +18,10 @@ CustomPainter class
 
 
 
-paint(Canvas canvas,Size size) 
+<b>paint(Canvas canvas,Size size)</b> 
 * Called whenever the object needs to paint. The given Canvas has its coordinate space configured such that the origin is at the top left of the box. The area of the box is the size of the size argument.
 
-shouldRepaint() 
+<b>shouldRepaint()</b> 
 * Called whenever a new instance of the custom painter delegate class is provided to the RenderCustomPaint object, or any time that a new CustomPaint object is created with a new instance of the custom painter delegate class (which amounts to the same thing, because the latter is implemented in terms of the former).
 * If the new instance represents different information than the old instance, then the method should return true, otherwise it should return false.
 * If the method returns false, then the paint call might be optimized away.
@@ -44,8 +44,8 @@ Path
 * The current point is initially at the origin. After each operation adding a segment to a sub-path, the current point is updated to the end of that segment.
 * Paths can be drawn on canvases using Canvas.drawPath, and can used to create clip regions using Canvas.clipPath.
 
-save() : This method is used to save the current state of Canvas.
-restore() : This method is used to restore the saved state from stack.
+<b>save() :</b> This method is used to save the current state of Canvas.
+<b>restore() :</b> This method is used to restore the saved state from stack.
             We can use any number of save before restore and the stack will remember all entries,
             i.e. restore will always pop the most recent entry.
             
