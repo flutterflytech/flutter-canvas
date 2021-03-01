@@ -15,7 +15,7 @@ class MyAnimatedCanvas extends StatefulWidget {
 class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
     with TickerProviderStateMixin {
   var _sides = 6.0; // Number of sides of polygon
-  var _radius = 7.0;
+  var _radius = 7.0; // distance of sides of polygon from central reference point
   Animation<double> animation;
   AnimationController controller;
   String infoText = "";
