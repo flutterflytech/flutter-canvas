@@ -1,4 +1,5 @@
 import 'package:Canvas/animatedcanvas/animated_shape_painter.dart';
+import 'package:flutter/rendering.dart';
 import 'animated_canvas_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -14,7 +15,7 @@ class MyAnimatedCanvas extends StatefulWidget {
 class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
     with TickerProviderStateMixin {
   var _sides = 6.0;
-  var _radius = 103.0;
+  var _radius = 100.0;
   Animation<double> animation;
   AnimationController controller;
   String infoText = "";
@@ -147,6 +148,33 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
             Text(
               infoText,
               style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Sides : ",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Slider(
+                    autofocus: false,
+                    min: 0.0, // minimum Value
+                    activeColor: Colors.red,
+                    inactiveColor: Colors.amber,
+                    max: 20,
+                    divisions: 15,
+                    value: _sides,
+                    onChanged: (val) {
+                      setState(() {
+                        _sides = val;
+                        //infoText += "";
+                        //infoText += _sides.toString();
+                        print("Sides>>>>>>>>> $_sides");
+                      });
+                    }),
+                Text((_sides + 1).toInt().toString()),
+              ],
             ),
           ],
         ),
