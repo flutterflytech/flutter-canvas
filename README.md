@@ -50,14 +50,7 @@ Canvas in flutter
             i.e. restore will always pop the most recent entry.
             
 
-<b>References</b>
 
-Canvas Advance Use Cases
-https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
-
-Animating the shapes on Canvas
-https://blog.codemagic.io/
- 
 # Animating the Shapes Drawn using Canvas
 
 AnimationController class Null safety
@@ -72,3 +65,13 @@ Methods of AnimationController class
 * <b>forward() :</b> Takes away the animation in forward direction
 * <b>stop() :</b> Stops the currently onGoing animation
 * <b>reverse() :</b> Takes away the animation in reverse direction .
+
+
+<b>References</b>
+
+Canvas Advance Use Cases
+https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
+
+Animating the shapes on Canvas
+https://blog.codemagic.io/
+ 
