@@ -61,7 +61,7 @@ This class lets you perform tasks such as:
 * Define the upperBound and lowerBound values of an animation.
 * Create a fling animation effect using a physics simulation.
 
-Methods of AnimationController class 
+Methods & Variables of AnimationController class 
 * <b>forward() :</b> Takes away the animation in forward direction
 * <b>stop() :</b> Stops the currently onGoing animation
 * <b>reverse() :</b> Takes away the animation in reverse direction .
@@ -69,7 +69,7 @@ Methods of AnimationController class
 * <b>lowerBound :</b> It is the smallest value this animation can obtain and the value at which this animation is deemed to be dismissed. 
                       It cannot be null.
 * <b>upperBound :</b> It is the largest value this animation can obtain and the value at which this animation is deemed to be completed. It cannot be null.
-
+* <b>vsync : </b> It is the TickerProvider for the current context. It can be changed by calling resync. It is required and must not be null. See TickerProvider for advice on obtaining a ticker provider.
 
 <b>References</b>
 
