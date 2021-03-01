@@ -51,6 +51,7 @@ Canvas in flutter
             
 
 <b>References</b>
+
 Canvas Advance Use Cases
 https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
 
