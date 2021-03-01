@@ -159,7 +159,8 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
                 ),
                 Slider(
                     autofocus: false,
-                    min: 0.0, // minimum Value
+                    min: 0.0,
+                    // minimum Value
                     activeColor: Colors.red,
                     inactiveColor: Colors.amber,
                     max: 20,
@@ -173,9 +174,38 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
                         print("Sides>>>>>>>>> $_sides");
                       });
                     }),
-                Text((_sides + 1).toInt().toString()),
+                Text((_sides + 1).toInt().toString(),
+                    style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Radius",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Slider(
+                    autofocus: false,
+                    min: 1.0,
+                    // minimum Value
+                    activeColor: Colors.red,
+                    inactiveColor: Colors.amber,
+                    max: 78,
+                    divisions: 5,
+                    value: _radius,
+                    onChanged: (val) {
+                      setState(() {
+                        _radius = val;
+                        print("Radius>>>>>>>>> $_sides");
+                      });
+                    }),
+                Text(
+                  _radius.toInt().toString(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            )
           ],
         ),
       ),
