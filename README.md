@@ -50,7 +50,7 @@ restore() : This method is used to restore the saved state from stack.
             i.e. restore will always pop the most recent entry.
             
 
-References<br></br>
+<b>References</b><br></br>
 Canvas Advance Use Cases
 https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
 
