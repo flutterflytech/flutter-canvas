@@ -53,7 +53,7 @@ Canvas in flutter
 
 # Animating the Shapes Drawn using Canvas
 
-AnimationController class Null safety
+<b>AnimationController</b> class Null safety
 A controller for an animation.
 This class lets you perform tasks such as:
 * Play an animation forward or in reverse, or stop an animation.
@@ -65,6 +65,10 @@ Methods of AnimationController class
 * <b>forward() :</b> Takes away the animation in forward direction
 * <b>stop() :</b> Stops the currently onGoing animation
 * <b>reverse() :</b> Takes away the animation in reverse direction .
+* <b>duration :</b> It is the length of time this animation should last.
+* <b>lowerBound :</b> It is the smallest value this animation can obtain and the value at which this animation is deemed to be dismissed. 
+                      It cannot be null.
+* <b>upperBound :</b> It is the largest value this animation can obtain and the value at which this animation is deemed to be completed. It cannot be null.
 
 
 <b>References</b>
