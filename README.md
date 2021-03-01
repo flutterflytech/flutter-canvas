@@ -56,8 +56,7 @@ https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
 
 Animating the shapes on Canvas
 https://blog.codemagic.io/
-_____________________________________________________________________________________________________________________
-
+ 
 # Animating the Shapes Drawn using Canvas
 
 AnimationController class Null safety
@@ -68,3 +67,7 @@ This class lets you perform tasks such as:
 * Define the upperBound and lowerBound values of an animation.
 * Create a fling animation effect using a physics simulation.
 
+Methods of AnimationController class 
+* <b>forward() :</b> Takes away the animation in forward direction
+* <b>stop() :</b> Stops the currently onGoing animation
+* <b>reverse() :</b> Takes away the animation in reverse direction .
