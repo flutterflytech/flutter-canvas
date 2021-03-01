@@ -68,7 +68,7 @@ Methods & Variables of AnimationController class
 * <b>upperBound :</b> It is the largest value this animation can obtain and the value at which this animation is deemed to be completed. It cannot be null.
 * <b>vsync : </b> It is the TickerProvider for the current context. It can be changed by calling resync. It is required and must not be null. See TickerProvider for advice on obtaining a ticker provider.
 
-<b>Important Notes Regarding AnimationController class in flutter<b><br></br>
+<b>Important Notes Regarding AnimationController class in flutter</b><br></br>
 * An <b>AnimationController</b> should be <b>disposed</b> when it is no longer needed.
 * This reduces the likelihood of leaks. When used with a <b>StatefulWidget</b>, it is common for an <b>AnimationController</b> to be created in the
 * <b>State.initState</b> method and then disposed in the <b>State.dispose</b> method.
