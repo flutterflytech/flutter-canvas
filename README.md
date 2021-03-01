@@ -69,10 +69,9 @@ Methods & Variables of AnimationController class
 * <b>vsync : </b> It is the TickerProvider for the current context. It can be changed by calling resync. It is required and must not be null. See TickerProvider for advice on obtaining a ticker provider.
 
 <b>Important Notes Regarding AnimationController class in flutter<b><br></br>
-* An [AnimationController] should be [dispose]d when it is no longer needed.
-* This reduces the likelihood of leaks. When used with a [StatefulWidget], it
-* is common for an [AnimationController] to be created in the
-* [State.initState] method and then disposed in the [State.dispose] method.
+* An <b>AnimationController</b> should be <b>disposed</b> when it is no longer needed.
+* This reduces the likelihood of leaks. When used with a <b>StatefulWidget</b>, it is common for an <b>AnimationController</b> to be created in the
+* <b>State.initState</b> method and then disposed in the <b>State.dispose</b> method.
  
 
 
