@@ -17,7 +17,6 @@ Canvas in flutter
 * The shouldRepaint method is called when a new instance of the class is provided, to check if the new instance actually represents different information.
 
 
-
 <b>paint(Canvas canvas,Size size)</b> 
 * Called whenever the object needs to paint. The given Canvas has its coordinate space configured such that the origin is at the top left of the box. The area of the box is the size of the size argument.
 
@@ -28,8 +27,6 @@ Canvas in flutter
 * It's possible that the paint method will get called even if shouldRepaint returns false (e.g. if an ancestor or descendant needed to be repainted). It's also possible that the paint method will get called without shouldRepaint being called at all (e.g. if the box changes size).
 * If a custom delegate has a particularly expensive paint function such that repaints should be avoided as much as possible, a RepaintBoundary or RenderRepaintBoundary (or other render object with RenderObject.isRepaintBoundary set to true) might be helpful.
 * The oldDelegate argument will never be null.
-
-
 
 
 <b>Paint</b>
@@ -70,6 +67,14 @@ Methods & Variables of AnimationController class
                       It cannot be null.
 * <b>upperBound :</b> It is the largest value this animation can obtain and the value at which this animation is deemed to be completed. It cannot be null.
 * <b>vsync : </b> It is the TickerProvider for the current context. It can be changed by calling resync. It is required and must not be null. See TickerProvider for advice on obtaining a ticker provider.
+
+<b>Important Notes Regarding AnimationController class in flutter<b><br></br>
+* An [AnimationController] should be [dispose]d when it is no longer needed.
+* This reduces the likelihood of leaks. When used with a [StatefulWidget], it
+* is common for an [AnimationController] to be created in the
+* [State.initState] method and then disposed in the [State.dispose] method.
+ 
+
 
 <b>References</b>
 

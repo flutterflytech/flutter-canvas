@@ -29,6 +29,7 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
     controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: 900),
+      animationBehavior: AnimationBehavior.preserve,
     );
 
     Tween<double> _radiusTween = Tween(begin: 0.0, end: 590);
