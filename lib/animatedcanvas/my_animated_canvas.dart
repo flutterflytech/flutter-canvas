@@ -14,8 +14,8 @@ class MyAnimatedCanvas extends StatefulWidget {
 
 class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
     with TickerProviderStateMixin {
-  var _sides = 6.0;
-  var _radius = 100.0;
+  var _sides = 6.0; // Number of sides of polygon
+  var _radius = 7.0;
   Animation<double> animation;
   AnimationController controller;
   String infoText = "";
@@ -187,17 +187,17 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
                 ),
                 Slider(
                     autofocus: false,
-                    min: 1.0,
+                    min: 5.0,
                     // minimum Value
                     activeColor: Colors.red,
                     inactiveColor: Colors.amber,
-                    max: 78,
+                    max: 70,
                     divisions: 5,
                     value: _radius,
                     onChanged: (val) {
                       setState(() {
                         _radius = val;
-                        print("Radius>>>>>>>>> $_sides");
+                        print("Radius>>>>>>>>> $_radius");
                       });
                     }),
                 Text(
