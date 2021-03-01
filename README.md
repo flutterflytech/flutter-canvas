@@ -32,11 +32,11 @@ Canvas in flutter
 
 
 
-Paint
+<b>Paint</b>
 * A description of the style to use when drawing on a Canvas.
 * Most APIs on Canvas take a Paint object to describe the style to use for that operation.
 
-Path
+<b>Path</b>
 * A complex, one-dimensional subset of a plane.
 * A path consists of a number of sub-paths, and a current point.
 * Sub-paths consist of segments of various types, such as lines, arcs, or beziers. Sub-paths can be open or closed, and can self-intersect.
