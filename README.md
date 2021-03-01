@@ -55,8 +55,16 @@ Canvas Advance Use Cases
 https://medium.com/flutter-community/flutter-face-detection-ac18e3e2211f
 
 Animating the shapes on Canvas
-https://blog.codemagic.io/_____________________________________________________________________________________________________________________
+https://blog.codemagic.io/
+_____________________________________________________________________________________________________________________
 
 # Animating the Shapes Drawn using Canvas
 
+AnimationController class Null safety
+A controller for an animation.
+This class lets you perform tasks such as:
+* Play an animation forward or in reverse, or stop an animation.
+* Set the animation to a specific value.
+* Define the upperBound and lowerBound values of an animation.
+* Create a fling animation effect using a physics simulation.
 

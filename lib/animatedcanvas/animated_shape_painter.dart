@@ -11,6 +11,7 @@ class ShapePainter extends CustomPainter {
     sides = side1;
     radius = radius1;
     radians = radians1;
+    //print(">>>> $sides $radius $radians");
   }
 
   @override

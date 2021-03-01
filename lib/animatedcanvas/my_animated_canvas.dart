@@ -1,10 +1,10 @@
 import 'package:Canvas/animatedcanvas/animated_shape_painter.dart';
-
 import 'animated_canvas_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:math'; // will not work
 import 'dart:math' as math; // will work
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyAnimatedCanvas extends StatefulWidget {
   @override
@@ -13,17 +13,18 @@ class MyAnimatedCanvas extends StatefulWidget {
 
 class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
     with TickerProviderStateMixin {
-  var _sides = 3.0;
+  var _sides = 6.0;
+  var _radius = 103.0;
   Animation<double> animation;
   AnimationController controller;
-
+  String infoText = "";
   Tween<double> _rotationTween = Tween(begin: -math.pi, end: math.pi);
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    print(">>>>>>>>>>initState");
+
     controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: 900),
@@ -34,18 +35,46 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
 
     animation = _radiusTween.animate(controller)
       ..addListener(() {
-        setState(() {});
+        setState(() {
+          // print("SET STATE " + controller.upperBound.toString());
+          // print("SET STATE Velocity " + controller.velocity.toString());
+          // print("SET STATE " + controller.upperBound.toString());
+        });
       })
       ..addStatusListener((status) {
+        // print("Value >>>>: $controller.value ");
+        print(controller.value);
+        print(controller.animationBehavior);
+        print(controller.debugLabel);
+        print(controller.duration);
+        print(controller.isAnimating);
+        print(controller.lastElapsedDuration);
+        print(controller.lowerBound);
+        print(controller.velocity);
+        print(controller.reverseDuration);
+        print(controller.upperBound);
+        print(controller.view);
+        print(controller.isCompleted);
+        print(controller.isDismissed);
         if (status == AnimationStatus.completed) {
           print("Completed...>>>>>>>>>>>>>>>>> " + animation.value.toString());
-          controller.repeat();
+          //controller.stop();
+          infoText += "\n" + controller.status.toString();
+          controller.forward();
         } else if (status == AnimationStatus.dismissed) {
           print("Dismissed...>>>>>>>>>>>>>>>>>>" + animation.value.toString());
           controller.forward();
         }
       });
-    controller.forward();
+    //   controller.forward();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    controller.dispose();
+    infoText = "";
   }
 
   @override
@@ -54,9 +83,73 @@ class _MyAnimatedCanvasState extends State<MyAnimatedCanvas>
       height: MediaQuery.of(context).size.height * 1,
       width: MediaQuery.of(context).size.width * 1,
       // color: Colors.red,
-      child: CustomPaint(
-        painter: ShapePainter(3, 103, animation.value), // sides,radius,radians
-        child: Container(),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 58.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RaisedButton(
+                  onPressed: () {
+                    setState(() {
+                      if (!controller.isAnimating) {
+                        controller.forward();
+                        infoText = "\nStarted in Forward Direction";
+                      }
+                    });
+                  },
+                  child: Text(
+                    "Start",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    setState(() {
+                      if (controller.isAnimating) {
+                        controller.stop();
+                        infoText = "";
+                        infoText += "\nStopped";
+                      }
+                    });
+                  },
+                  child: Text(
+                    "Stop",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    controller.reverse();
+                    setState(() {
+                      infoText = "\nStarted in Reverse Direction";
+                    });
+                  },
+                  child: Text(
+                    "Reverse",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(108.0),
+              child: CustomPaint(
+                painter: ShapePainter(
+                    _sides, _radius, animation.value), // sides,radius,radians
+                child: Container(),
+              ),
+            ),
+            Text(
+              infoText,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
