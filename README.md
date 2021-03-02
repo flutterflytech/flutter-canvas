@@ -16,7 +16,6 @@ Canvas in flutter
 * The paint method is called whenever the custom object needs to be repainted.
 * The shouldRepaint method is called when a new instance of the class is provided, to check if the new instance actually represents different information.
 
-
 <b>paint(Canvas canvas,Size size)</b> 
 * Called whenever the object needs to paint. The given Canvas has its coordinate space configured such that the origin is at the top left of the box. The area of the box is the size of the size argument.
 
@@ -27,7 +26,6 @@ Canvas in flutter
 * It's possible that the paint method will get called even if shouldRepaint returns false (e.g. if an ancestor or descendant needed to be repainted). It's also possible that the paint method will get called without shouldRepaint being called at all (e.g. if the box changes size).
 * If a custom delegate has a particularly expensive paint function such that repaints should be avoided as much as possible, a RepaintBoundary or RenderRepaintBoundary (or other render object with RenderObject.isRepaintBoundary set to true) might be helpful.
 * The oldDelegate argument will never be null.
-
 
 <b>Paint</b>
 * A description of the style to use when drawing on a Canvas.
@@ -72,8 +70,6 @@ Methods & Variables of AnimationController class
 * An <b>AnimationController</b> should be <b>disposed</b> when it is no longer needed.
 * This reduces the likelihood of leaks. When used with a <b>StatefulWidget</b>, it is common for an <b>AnimationController</b> to be created in the
 * <b>State.initState</b> method and then disposed in the <b>State.dispose</b> method.
- 
-
 
 <b>References</b>
 
