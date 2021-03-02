@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(ImpliciteAnimation());
+  runApp(AnimatedPaddingScreen());
 }
 
-class ImpliciteAnimation extends StatelessWidget {
+class AnimatedPaddingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,8 +43,8 @@ class _ImpliciteAnimationUIState extends State<ImpliciteAnimationUI> {
                 RaisedButton(
                   onPressed: () {
                     setState(() {
-                      if (padValue != 150.0) {
-                        padValue = 150.0;
+                      if (padValue != 90.0) {
+                        padValue = 90.0;
                       } else {
                         padValue = 0;
                       }
@@ -65,19 +65,42 @@ class _ImpliciteAnimationUIState extends State<ImpliciteAnimationUI> {
               padding: EdgeInsets.all(padValue),
               duration: Duration(seconds: 2),
               curve: Curves.linear,
-              child: Container(
-                height: 70,
-                width: 270,
-                color: Colors.orange,
-                child: Column(
-                  children: [
-                    Text(
-                      "Name : Alok",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+              child: Column(
+                children: [
+                  Container(
+                    height: 70,
+                    width: 270,
+                    color: Colors.orange,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Name : Alok",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text("Location : Noida"),
+                      ],
                     ),
-                    Text("Location : Noida"),
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 70,
+                    width: 270,
+                    color: Colors.orange,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Name : Alok",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text("Location : Noida"),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
