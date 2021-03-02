@@ -66,11 +66,20 @@ class _ImpliciteAnimationUIState extends State<ImpliciteAnimationUI> {
               duration: Duration(seconds: 2),
               curve: Curves.linear,
               child: Container(
-                height: 50,
-                width: 250,
+                height: 70,
+                width: 270,
                 color: Colors.orange,
+                child: Column(
+                  children: [
+                    Text(
+                      "Name : Alok",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text("Location : Noida"),
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
