@@ -48,7 +48,7 @@ class AnimatingButtonState extends State<AnimatingButton>
         vsync: this,
         duration: Duration(
             seconds:
-                2)); //specify the duration for the animation & include `this` for the vsyc
+            2)); //specify the duration for the animation & include `this` for the vsyc
     _animation = Tween<double>(begin: 1.0, end: 2.5).animate(
         _animationController); //use Tween animation here, to animate between the values of 1.0 & 2.5.
 
@@ -69,7 +69,7 @@ class AnimatingButtonState extends State<AnimatingButton>
         vsync: this,
         duration: Duration(
             seconds:
-                2)); //specify the duration for the animation & include `this` for the vsyc
+            2)); //specify the duration for the animation & include `this` for the vsyc
     _animation1 = Tween<double>(begin: 1.0, end: 2.5).animate(
         _animationController1); //use Tween animation here, to animate between the values of 1.0 & 2.5.
 
