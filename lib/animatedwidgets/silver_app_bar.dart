@@ -12,7 +12,7 @@ class SilverAppBar extends StatelessWidget {
       listItems.add(new Padding(
           padding: new EdgeInsets.all(20.0),
           child: new Text('Item ${i.toString()}',
-              style: new TextStyle(fontSize: 25.0))));
+              style: new TextStyle(fontSize: 15.0))));
     }
     return listItems;
   }
